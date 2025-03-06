@@ -28,3 +28,27 @@ View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-th
 
 =========
 For more details, read [documentation](http://jekyllrb.com/)
+
+
+
+Run project
+
+
+Tải RubyInstaller từ https://rubyinstaller.org/
+<!-- ruby -v -->
+
+gem install bundler jekyll
+
+bundle init
+
+Open Gemfile and edit
+<!-- source "https://rubygems.org"
+
+gem "jekyll" -->
+
+bundle install
+bundle exec jekyll serve
+
+
+
+

@@ -173,11 +173,195 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    padding-top:  25px;
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #{{ site.data.template.color.primary }};
+    color: var(--Neutral-N5, #FFF); /* Màu trắng, đã đúng */
+    text-align: left; /* Căn trái thay vì căn giữa */
+    font-family: "Nau Sea"; /* Font đã đúng */
+    font-size: 24px; /* Giảm kích thước font để giống hơn */
+    font-style: normal; /* Đã đúng */
+    font-weight: 400; /* Đã đúng */
+    line-height: normal; /* Đã đúng */
+    letter-spacing: 2px; /* Tăng khoảng cách chữ để giống thiết kế */
+    text-transform: uppercase; /* Chuyển chữ thành in hoa */
+    padding: 15px 20px; /* Thêm padding để căn chỉnh vị trí */
+}
+
+.container {
+    text-align: center;
+}
+
+.intro-text > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 160%;
+    font-size: 69px;
+    font-family: Inter;
+    font-weight: 700;
+    border: 2px solid var(--Primary-P4, #1FDAFF);
+    padding: 54px;
+}
+
+.main-intro-text {
+    position: relative;
+}
+
+.main-intro-text::before,
+.main-intro-text::after,
+.main-intro-text .square::before,
+.main-intro-text .square::after
+ {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--Primary-P4, #1FDAFF);
+    background: #FFF;
+    z-index: 100;
+}
+
+.main-intro-text::before {
+    top: -15px;
+    left: -15px;
+}
+
+.main-intro-text::after {
+    top: -15px;
+    right: -15px;
+}
+
+.main-intro-text .square::before {
+    bottom: -15px;
+    left: -15px;
+}
+
+.main-intro-text .square::after {
+    bottom: -15px;
+    right: -15px;
+}
+
+.highlight {
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    color: #fff; /* Văn bản màu trắng */
+    padding: 5px 10px; /* Padding cho nền */
+    line-height: 1; /* Đảm bảo căn chỉnh */
+    z-index: 10;
+}
+
+.highlight p {
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    color: #fff; /* Văn bản màu trắng */
+    line-height: 1; /* Đảm bảo căn chỉnh */
+    z-index: 10;
+    width: 100%;
+    font-size: 69px;
+}
+
+.highlight.green p {
+    padding: 5px 12px; /* Padding cho nền */
+}
+
+.rotate-bg-first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-4deg); /* Nghiêng -10 độ */
+    background-color: #39ff14;
+    border-radius: 8px;
+    z-index: 9;
+}
+
+.rotate-bg-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 9;
+}
+
+.green p {
+    color: black;
+}
+.pink .rotate-bg-second {
+    transform: rotate(1deg);
+    background-color: #ff5ea7;
+}
+.blue .rotate-bg-second {
+    transform: rotate(2deg);
+    background-color: #7767ff;
+}
+.intro-button {
+    border: none !important;
+    align-items: flex-end !important;
+    padding-right: 0 !important;
+    margin-top: 14px;
+}
+.intro-button div {
+    color: var(--Neutral-N1, #161618);
+    text-align: center;
+    font-family: "Nau Sea";
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.275px;
+    
+    display: inline-flex;
+    padding: 16px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 64px;
+    background: var(--Primary-P1, #B3EE28);
+    position: relative !important;
+}
+.arrow {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+}
+
+@media(max-width:1200px) {
+    .highlight p {
+        font-size: 48px;
+    }
+    .intro-text > div {
+        font-size: 48px;
+    }
+    .intro-button div {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:768px) {
+    .highlight p {
+        font-size: 32px;
+    }
+    .intro-text > div {
+        font-size: 32px;
+    }
+    .highlight.green p {
+        padding: 0; /* Padding cho nền */
+    }
+    .intro-button div {
+        font-size: 30px;
+    }
+    .arrow {
+        width: 48px;
+        top: -30px;
+        left: -30px;
+    }
 }
 
 .navbar-default .navbar-brand:hover,
@@ -236,7 +420,6 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
         border: 0;
         background-color: transparent;
         -webkit-transition: padding .3s;
@@ -269,13 +452,28 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
     background-position: center center;
-    background-repeat: none;
+    background-repeat: no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: linear-gradient(90deg, #1a1a2e 10%, #0a0a0a 80%);
+    position: relative; 
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px);
+    z-index: 0;
+    opacity: 0.8; 
 }
 
 header .intro-text {

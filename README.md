@@ -31,7 +31,7 @@ For more details, read [documentation](http://jekyllrb.com/)
 
 
 
-Run project
+==========Run project=============
 
 
 Tải RubyInstaller từ https://rubyinstaller.org/
@@ -42,12 +42,26 @@ gem install bundler jekyll
 bundle init
 
 Open Gemfile and edit
-<!-- source "https://rubygems.org"
 
-gem "jekyll" -->
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
 
 bundle install
 bundle exec jekyll serve
+
+
+
+
+
+=============Deploy github page============
+
+<!-- _config.yml -->
+baseurl: "/agency-jekyll-theme-tiendo"
+url: "https://tiendo0808.github.io"
+
+bundle install
+bundle exec jekyll serve
+
 
 
 

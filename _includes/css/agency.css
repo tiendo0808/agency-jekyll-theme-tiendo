@@ -423,25 +423,24 @@ fieldset[disabled] .btn-xl.active {
     opacity: 0.8;
 }
 #about .main-intro-text {
-    font-size: 32px;
-    font-size: 32px;
+    font-size: 46px;
     width: max-content;
-    padding: 12px;
+    padding: 12px 18px;
     font-family: 'Nau Sea';
     color: #fff;
     letter-spacing: 0.6px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .about-text {
-    border: 2px solid var(--Primary-P1, #B3EE28);
+    border: 2px solid var(--Primary-P4, #1FDAFF);
 }
 
 .about-text::before, .about-text::after, .about-text .square::before, .about-text .square::after {
     width: 22px;
     height: 22px;
-    border: 2px solid var(--Primary-P1, #B3EE28);
+    border: 2px solid var(--Primary-P4, #1FDAFF);
 }
 
 .about-text::before {
@@ -527,6 +526,38 @@ fieldset[disabled] .btn-xl.active {
         justify-content: center;
         align-items: center;
     }
+}
+
+.button-intro {
+    display: flex;
+    text-align: center;
+    font-family: "Nau Sea";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 0.35px;
+    margin-bottom: 22px;
+    gap: 12px;
+}
+
+.button-intro div {
+    display: flex;
+    padding: 0px 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+}
+
+.button-intro .button-intro_first {
+    color: var(--Neutral-N1, #161618);
+    background: var(--Primary-P1, #B3EE28);
+}
+
+.button-intro .button-intro_second {
+    color: var(--Neutral-N5, #FFF);
+    background: var(--Primary-P2, #F35F9C);
 }
 
 .navbar-default .navbar-brand:hover,

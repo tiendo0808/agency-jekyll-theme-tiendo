@@ -320,14 +320,13 @@ fieldset[disabled] .btn-xl.active {
     padding: 34px;
     border: none !important;
     align-items: flex-end !important;
-    padding-right: 0 !important;
     margin-top: 14px;
 }
 .intro-button div {
     color: var(--Neutral-N1, #161618);
     text-align: center;
     font-family: "Nau Sea";
-    font-size: 39px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -344,8 +343,9 @@ fieldset[disabled] .btn-xl.active {
 }
 .arrow {
     position: absolute;
-    top: -40px;
-    left: -40px;
+    top: -32px;
+    left: -32px;
+    width: 48px;
 }
 
 @media(max-width:1200px) {
@@ -357,6 +357,12 @@ fieldset[disabled] .btn-xl.active {
     }
     .intro-button div {
         font-size: 30px;
+    }
+    .about-detail {
+        flex-wrap: wrap;
+    }
+    .about-detail_col {
+        margin-top: 50px;
     }
 }
 
@@ -381,11 +387,6 @@ fieldset[disabled] .btn-xl.active {
     }
     .intro-button div {
         font-size: 25px;
-    }
-    .arrow {
-        width: 48px;
-        top: -30px;
-        left: -30px;
     }
 }
 
@@ -528,6 +529,15 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
+@media(max-width:828px) {
+    #about .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .button-intro {
     display: flex;
     text-align: center;
@@ -558,6 +568,173 @@ fieldset[disabled] .btn-xl.active {
 .button-intro .button-intro_second {
     color: var(--Neutral-N5, #FFF);
     background: var(--Primary-P2, #F35F9C);
+}
+
+.about-detail {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.about-detail_container {
+    display: flex;
+    padding: 42px 38px 42px 38px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border-radius: 32px;
+    border: 2px dashed rgba(95, 95, 99, 0.50);
+    background: var(--Background, #131415);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--Neutral-N5, #FFF);
+
+    text-align: justify;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: 0.18px;
+    position: relative;
+}
+
+.element_has_icon > div {
+    display: flex;
+    gap: 10px;
+}
+
+.about-detail_container .title {
+    position: absolute;
+    color: var(--Neutral-N5, #FFF);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    top: -22px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-detail_container .title > div {
+    width: max-content;
+    position: relative;
+    padding: 4px 12px;
+}
+
+.about-detail_container .title > div .text {
+    position: relative;
+    z-index: 10;
+}
+
+.about-detail_container .title > div .rotate-bg {
+    border-radius: 6px;
+}
+
+.about-detail_container .title .rotate-bg {
+    z-index: 9;
+}
+
+.information .rotate-bg {
+    background: var(--Primary-P2, #F35F9C);
+    transform: rotate(2deg);
+}
+
+.about-detail_container .rotate-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.diamond_icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><rect x="1.39453" y="12.948" width="15" height="15" rx="2" transform="rotate(-45 1.39453 12.948)" fill="%237057FF"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.evenodd_icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 3.24089C12.3166 2.85037 11.6834 2.85037 11.2929 3.24089L8.29289 6.24089C7.90237 6.63142 7.90237 7.26458 8.29289 7.65511L11.2929 10.6551C11.6834 11.0456 12.3166 11.0456 12.7071 10.6551L15.7071 7.65511C16.0976 7.26458 16.0976 6.63142 15.7071 6.24089L12.7071 3.24089ZM11.2929 15.2409C11.6834 14.8504 12.3166 14.8504 12.7071 15.2409L15.7071 18.2409C16.0976 18.6314 16.0976 19.2646 15.7071 19.6551L12.7071 22.6551C12.3166 23.0456 11.6834 23.0456 11.2929 22.6551L8.29289 19.6551C7.90237 19.2646 7.90237 18.6314 8.29289 18.2409L11.2929 15.2409ZM17.2929 9.24089C17.6834 8.85037 18.3166 8.85037 18.7071 9.24089L21.7071 12.2409C22.0976 12.6314 22.0976 13.2646 21.7071 13.6551L18.7071 16.6551C18.3166 17.0456 17.6834 17.0456 17.2929 16.6551L14.2929 13.6551C13.9024 13.2646 13.9024 12.6314 14.2929 12.2409L17.2929 9.24089ZM5.29289 9.24089C5.68342 8.85037 6.31658 8.85037 6.70711 9.24089L9.70711 12.2409C10.0976 12.6314 10.0976 13.2646 9.70711 13.6551L6.70711 16.6551C6.31658 17.0456 5.68342 17.0456 5.29289 16.6551L2.29289 13.6551C1.90237 13.2646 1.90237 12.6314 2.29289 12.2409L5.29289 9.24089Z" fill="%237057FF"/%3E%3C/svg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+.about-detail_col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-detail_container .element span {
+    font-size: 12px;
+    color: var(--Neutral-N3, #ACACAF);
+    letter-spacing: 0.1px;
+}
+
+.experience .rotate-bg {
+    background: var(--Primary-P1, #B3EE28);
+    transform: rotate(1deg);
+}
+
+.experience .text {
+    color: var(--Neutral-N1, #161618);
+}
+
+.education .rotate-bg {
+    background: var(--Primary-P3, #7057FF);
+    transform: rotate(2deg);
+}
+
+.tools .rotate-bg {
+    background: var(--Primary-P4, #1FDAFF);
+    transform: rotate(-2deg);
+}
+
+.tools .icon_tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+}
+
+.tools .icon_tools img {
+    width: 64px;
+}
+
+.about-detail_container.tools {
+    gap: 36px;
+}
+
+.key_strengths .rotate-bg {
+    background: var(--Primary-P1, #B3EE28);
+    transform: rotate(-2deg);
+}
+
+.key_strengths .text {
+    color: var(--Neutral-N1, #161618);
+}
+
+.soft_skills .rotate-bg {
+    background: var(--Primary-P2, #F35F9C);
+    transform: rotate(-2deg);
+}
+
+.key_strengths  {
+    gap: 9px;
+}
+
+.soft_skills  {
+    gap: 10px;
 }
 
 .navbar-default .navbar-brand:hover,

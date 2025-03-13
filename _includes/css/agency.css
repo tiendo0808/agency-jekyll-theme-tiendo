@@ -27,25 +27,6 @@ p.large {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    outline: 0;
-}
-
-a {
-    color: #{{ site.data.template.color.primary }};
-}
-
-a:hover,
-a:focus,
-a:active,
-a.active {
-    color: #{{ site.data.template.color.secondary }};
-}
-
 h1,
 h2,
 h3,
@@ -431,7 +412,7 @@ fieldset[disabled] .btn-xl.active {
     z-index: 0;
     opacity: 0.8;
 }
-#about .main-intro-text {
+.title_section .main-intro-text {
     font-size: 46px;
     width: max-content;
     padding: 12px 18px;
@@ -440,6 +421,19 @@ fieldset[disabled] .btn-xl.active {
     letter-spacing: 0.6px;
     font-style: normal;
     font-weight: 300;
+}
+
+.title_section .description {
+    font-size: 20px;
+    color: #FFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.24px;
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 76px;
 }
 
 .about-text {
@@ -476,6 +470,7 @@ fieldset[disabled] .btn-xl.active {
     margin-top: 18px;
     display: flex;
     align-items: center;
+    gap: 50px;
 }
 
 #about .content .content-text {
@@ -487,9 +482,10 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
     font-family: Inter;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 140%; 
-    letter-spacing: 1px;
+    letter-spacing: 0.1px;
+    text-align: justify;
 }
 
 #about .content .content-text .title {
@@ -499,19 +495,21 @@ fieldset[disabled] .btn-xl.active {
 
 #about .content .content-text .name {
     font-size: 40px;
+    font-weight: 700;
 }
 
 #about .content .content-text .description {
     font-size: 22px;
 }
 
-#about .content .content-image {
+.image_myself {
     position: relative;
     display: inline-block;
     width: 300px;
+    height: max-content;
 }
 
-#about .content .content-image .avatar {
+.image_myself .avatar {
     width: 100%;
     display: block;
     border-radius: 12px; /* Bo góc ảnh */
@@ -519,7 +517,7 @@ fieldset[disabled] .btn-xl.active {
     z-index: 2;
 }
 
-#about .content .content-image .image-shadow {
+.image_myself .image-shadow {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -646,7 +644,7 @@ fieldset[disabled] .btn-xl.active {
 
 .about-detail {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 160px;
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -716,6 +714,20 @@ fieldset[disabled] .btn-xl.active {
 .information .rotate-bg {
     background: var(--Primary-P2, #F35F9C);
     transform: rotate(2deg);
+}
+
+.information a {
+    color: #FFFFFF;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.information a:hover {
+    color: #5F5F63;
 }
 
 .about-detail_container .rotate-bg {
@@ -813,6 +825,127 @@ fieldset[disabled] .btn-xl.active {
 
 .soft_skills  {
     gap: 10px;
+}
+
+#portfolio {
+    background: linear-gradient(90deg, #1a1a2e 0%, #0a0a0a 80%);
+    position: relative;
+}
+
+#portfolio .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px);
+    z-index: 0;
+    opacity: 0.8;
+}
+
+#contact {
+    background: linear-gradient(90deg, #1a1a2e 0%, #0a0a0a 80%);
+    position: relative;
+}
+
+#contact .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 40px);
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.contact-content {
+    display: flex;
+}
+
+.contact-content .title_section {
+    flex: 1;
+}
+
+#contact .image_myself .image-shadow {
+    background: var(--Primary-P2, #F35F9C);
+}
+
+#contact .social {
+    display: flex;
+    padding: 20px 28px;
+    align-items: center;
+    gap: 12px;
+    width: 230px;
+    border-radius: 24px;
+    border: 2px dashed rgba(95, 95, 99, 0.50);
+    background: var(--Background, #131415);
+    height: 100%;
+}
+
+.social_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 460px;
+}
+
+.social_list a {
+    width: max-content;
+    position: relative;
+}
+
+.social_list a:hover {
+    text-decoration: none;
+}
+
+.social_list div:hover {
+    color: #5F5F63;
+    cursor: pointer;
+}
+
+#contact .social:hover {
+    cursor: pointer!important;
+}
+
+#contact .social span {
+    color: #fff; 
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#contact .social:hover span {
+    color: var(--Neutral-N2, #5F5F63);
+}
+
+#contact .social img {
+    width: 50px;
+}
+
+.form-contact {
+    margin-top: 90px;
+}
+
+.form-contact .btn-xl {
+    width: 200px;
+    padding: 16px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    background: var(--Primary-P1, #B3EE28);
+
+    color: var(--Neutral-N1, #161618);
+text-align: center;
+font-family: "Nau Sea";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.4px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -1015,6 +1148,10 @@ section h3.section-subheading {
     max-width: 400px;
 }
 
+#portfolio .portfolio-item .portfolio-link img {
+    border-radius: 12px;
+}
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
     width: 100%;
@@ -1022,6 +1159,7 @@ section h3.section-subheading {
     opacity: 0;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
+    border-radius: 12px;
     transition: all ease .5s;
     background: rgba(254,209,54,.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
@@ -1053,22 +1191,53 @@ section h3.section-subheading {
 
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
-    padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+#portfolio .portfolio-item .portfolio-caption .index {
+    color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-family: Inter;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#portfolio .portfolio-item .portfolio-caption .caption {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;
     text-transform: none;
+    color: var(--Neutral-N5, #FFF);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: left;
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
+    color: var(--Neutral-N4, #E5E5E6);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin: 0;
-    font-family: {{ site.data.template.font.secondary }};
-    font-size: 16px;
-    font-style: italic;
 }
 
 #portfolio * {
@@ -1305,19 +1474,33 @@ aside.clients img {
     margin: 50px auto;
 }
 
-section#contact {
+/* section#contact {
     background-color: #222;
     background-image: url('{{ site.baseurl }}/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 section#contact .section-heading {
     color: #fff;
 }
 
 section#contact .form-group {
-    margin-bottom: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section#contact .form-group .label {
+    color: var(--Neutral-N4, #E5E5E6);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-align: left;
 }
 
 section#contact .form-group input,
@@ -1327,10 +1510,20 @@ section#contact .form-group textarea {
 
 section#contact .form-group input.form-control {
     height: auto;
+    border-radius: 12px;
+    border: 2px dashed rgba(95, 95, 99, 0.50);
+    background: var(--Background, #131415);
+}
+
+section#contact .form-group input.form-control:focus, section#contact .form-group textarea.form-control:focus {
+    border: 2px dashed var(--Neutral-N5, #FFF);
 }
 
 section#contact .form-group textarea.form-control {
-    height: 236px;
+    height: 188px;
+    border-radius: 12px;
+    border: 2px dashed rgba(95, 95, 99, 0.50);
+    background: var(--Background, #131415);
 }
 
 section#contact .form-control:focus {

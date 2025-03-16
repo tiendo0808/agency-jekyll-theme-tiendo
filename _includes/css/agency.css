@@ -355,6 +355,13 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
+@media(max-width:1070px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+ }
+
 @media(max-width:992px) {
     .highlight p {
         font-size: 42px;

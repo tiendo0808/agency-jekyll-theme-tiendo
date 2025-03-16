@@ -505,7 +505,7 @@ fieldset[disabled] .btn-xl.active {
 .image_myself {
     position: relative;
     display: inline-block;
-    width: 300px;
+    width: 380px;
     height: max-content;
 }
 
@@ -541,7 +541,6 @@ fieldset[disabled] .btn-xl.active {
 .favourites .title p {
     font-size: 32px;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 1.25%;
 }
 
@@ -718,7 +717,6 @@ fieldset[disabled] .btn-xl.active {
 
 .information a {
     color: #FFFFFF;
-    text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
     text-decoration-thickness: auto;
@@ -728,6 +726,7 @@ fieldset[disabled] .btn-xl.active {
 
 .information a:hover {
     color: #5F5F63;
+    text-decoration-line: underline;
 }
 
 .about-detail_container .rotate-bg {
@@ -799,6 +798,8 @@ fieldset[disabled] .btn-xl.active {
 
 .tools .icon_tools img {
     width: 64px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .about-detail_container.tools {
@@ -863,6 +864,7 @@ fieldset[disabled] .btn-xl.active {
 
 .contact-content {
     display: flex;
+    align-items: center;
 }
 
 .contact-content .title_section {
@@ -897,7 +899,7 @@ fieldset[disabled] .btn-xl.active {
     position: relative;
 }
 
-.social_list a:hover {
+.social_list a:hover, .social_list a:focus {
     text-decoration: none;
 }
 
@@ -937,15 +939,22 @@ fieldset[disabled] .btn-xl.active {
     align-items: center;
     border-radius: 45px;
     background: var(--Primary-P1, #B3EE28);
-
     color: var(--Neutral-N1, #161618);
-text-align: center;
-font-family: "Nau Sea";
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.4px;
+    text-align: center;
+    font-family: "Nau Sea";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    border-color: transparent !important;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -1711,4 +1720,8 @@ body {
 .navbar-default .navbar-nav > .active > a {
     background-color: transparent !important;
     color: #B3EE28;
+}
+
+.toastify {
+    font-family: Inter;
 }

@@ -83,10 +83,42 @@ $(function() {
     
         const status = document.getElementById("success");
         if (response.ok) {
-            status.innerHTML = "✅ Email sent successfully!";
+            Toastify({
+                text: "Email sent successfully!",
+                duration: 3000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "right", 
+                stopOnFocus: true, 
+                style: {
+                  background: "#51A351",
+                  boxShadow: "0 0 12px #999",
+                  opacity: '0.8',
+                  top: '30px !important',
+                },
+                onClick: function(){} 
+              }).showToast();
             form.reset();
         } else {
-            status.innerHTML = "❌ Failed to send email. Please try again!";
+            Toastify({
+                text: "Failed to send email. Please try again!",
+                duration: 3000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right", 
+                stopOnFocus: true, 
+                style: {
+                  background: "#bd362f",
+                  boxShadow: "0 0 12px #999",
+                  opacity: '0.8',
+                  top: '30px !important',
+                },
+                onClick: function(){} 
+              }).showToast();
         }
     });
     $("a[data-toggle=\"tab\"]").click(function(e) {

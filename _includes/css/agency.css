@@ -1735,7 +1735,7 @@ ul.social-buttons li a:active {
 }
 
 @media (min-width: 1200px) {
-    .container {
+    .modal-content .container {
         width: 100%;
     }
 }

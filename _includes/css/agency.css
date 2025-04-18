@@ -1163,6 +1163,8 @@ section h3.section-subheading {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
 }
 
 #portfolio .portfolio-item .portfolio-link img {
@@ -1262,6 +1264,7 @@ section h3.section-subheading {
     font-weight: 400;
     line-height: normal;
     margin: 0;
+    text-align: left;
 }
 
 #portfolio * {
@@ -1283,6 +1286,7 @@ section h3.section-subheading {
     color: #fff;
     margin-bottom: 40px;
     text-align: left;
+    margin-top: 40px;
 }
 
 .timeline {
@@ -1536,6 +1540,7 @@ section#contact .form-group .label {
     line-height: normal;
     letter-spacing: 0.24px;
     text-align: left;
+    padding-left: 0;
 }
 
 section#contact .form-group input,
@@ -1658,12 +1663,20 @@ ul.social-buttons li a:active {
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background-color: #000000E0;
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 96px 77px 0 77px;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .portfolio-modal .modal-content .container {
     background-color: #fff;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.portfolio-modal .modal-content .container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
 .portfolio-modal .modal-content h2 {
@@ -1688,7 +1701,24 @@ ul.social-buttons li a:active {
 }
 
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.modal-body {
+    padding: 0 !important;
+}
+
+.content_container {
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    .col-lg-offset-2 {
+        margin-left: 0;
+    }
+    .col-lg-8 {
+        width: 100%;
+    }
 }
 
 .portfolio-modal .close-modal {

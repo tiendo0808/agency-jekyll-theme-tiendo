@@ -1,6 +1,6 @@
 ---
-title: Greenify 
-subtitle: Eco Simulation Game
+title: Trust 
+subtitle: Wellness App
 layout: default
 modal-id: 3
 date: 2014-07-16

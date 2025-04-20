@@ -1668,13 +1668,13 @@ ul.social-buttons li a:active {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.75);
-    padding: 96px 77px 0 77px;
+    padding: 0px 77px 0 77px;
     height: 100vh;
     max-height: 100vh;
 }
 
 .portfolio-modal .modal-content .container {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
     height: 100%;
     overflow-y: scroll;
 }
@@ -1704,12 +1704,9 @@ ul.social-buttons li a:active {
     margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content img {
-    /* margin-bottom: 30px; */
-}
-
 .modal-body {
     padding: 0 !important;
+    margin-top: 96px;
 }
 
 .content_container {

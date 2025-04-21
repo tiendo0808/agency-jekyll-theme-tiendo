@@ -1006,7 +1006,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
-    color: rgba(179, 238, 40, 1);
+    color: rgba(179, 238, 40, 1) !important;
     background-color: #{{ site.data.template.color.primary }};
 }
 
@@ -1015,8 +1015,9 @@ fieldset[disabled] .btn-xl.active {
     background-color: #{{ site.data.template.color.secondary }};
 }
 
-.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(179, 238, 40, 1);
+.navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:active {
+    color: rgba(179, 238, 40, 1) !important;
+    background: none;
 }
 
 @media(min-width:768px) {
